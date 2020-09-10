@@ -22,7 +22,7 @@ $ java derslerJava.java
 ```
 - Dosya yoluna erişim sağladığınızda **terminal üzerinden** **java derslerJava.java** yazdığınızda program çalışacaktır veya yüklediğiniz eklenti sayesinde **public static void main(String[] args) {}** bölümüne geldiğinizde **Run** ve **Debug** olmak üzere iki seçenek çıkacaktır **Run** komutuna tıklayarak programı çalıştırabilirsiniz.
 
-> **NOT** Java üzerine yeni çalışmaları bu bölüme ekleyeceğim.Şu an için eklenenler;
+### NOT Java üzerine yeni çalışmaları bu bölüme ekleyeceğim.Şu an için eklenenler;
 - Değişkenler ve Veri Tipleri
 - Şart Blokları
 - Döngüler
@@ -31,7 +31,7 @@ $ java derslerJava.java
 - Metodlar (functions)
 - Sınıflar (Class)
 - Encapsulation
-> **NOT** İlerleyen Süreçte Eklenecekler;
+### NOT İlerleyen Süreçte Eklenecekler;
 - Constructors
 - Inheritance
 - Polymorphism
