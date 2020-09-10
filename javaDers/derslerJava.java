@@ -160,6 +160,7 @@ public class derslerJava { // Ana tanımlama
         int search = numberFinder(); /* Metodu Çağır ve dönen değeri atama yap */
         searchNumbers(search); /* Metodu Çağır */
         /* !!! Metodlar !!! */
+        /* Yapılacak Eklemeler */
 
     }
     /* 1.Metod */
