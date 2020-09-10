@@ -6,7 +6,7 @@ Bu kodlar sadece eğitim amaçlı olarak hem kendime hemde java'yı öğrenmekte
 # Dosyaları Kullanabilmek İçin Sırasıyla Aşağıda Belirtilen Maddeleri Uygulayınız!!!
 
 **Önemli**
-**Bu Kodları Visual Studio Code ile yazdım. Hem java jdk kullanarak hemde farklı bir ortamda (Runtime environment) nasıl çalıştırıldığını anlamanız adına yaptım.
+Bu Kodları Visual Studio Code ile yazdım. Hem java jdk kullanarak hemde farklı bir ortamda (Runtime environment) nasıl çalıştırıldığını anlamanız adına yaptım.
 
 - Son sürüm Java JDK'yı indiriniz.
 - Java JDK indirildikten sonra kurulumu gerçekleştiriniz.
