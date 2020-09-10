@@ -14,7 +14,7 @@ Bu kodlar sadece eğitim amaçlı olarak hem kendime hemde java'yı öğrenmekte
 **Örnek (C:\Program Files\Java ve C:\Program Files\Java\bin)**
 - **Visual Studio Code** indiriniz.
 - **Visual Studio Code** içerisindeki **Extensions** bölümünde arama çubuğuna **Java Extension Pack** yazarak karşınıza çıkan eklenti paketini yükleyiniz. Bu eklenti paketi sizin kodları daha iyi anlamanıza ve kodlar üzerinde değişiklik yaparken kod yazımına yardımcı olacaktır.
-- İndirdiğiniz klasör içerisinde ki dosyaya **terminal üzerinden** **cd** komutunu kullanarak erişiniz.**Örnek cd JavaDers**
+- İndirdiğiniz klasör içerisinde ki dosyaya **terminal üzerinden** **cd** komutunu kullanarak erişiniz.**Örnek: cd JavaDers**
 - Dosya yoluna erişim sağladığınızda **terminal üzerinden** **java derslerJava.java** yazdığınızda program çalışacaktır veya yüklediğiniz eklenti sayesinde **public static void main(String[] args) {}** bölümüne geldiğinizde **Run** ve **Debug** olmak üzere iki seçenek çıkacaktır **Run** komutuna tıklayarak programı çalıştırabilirsiniz.
 
 > **NOT** Java üzerine yeni çalışmaları bu bölüme ekleyeceğim.Şu an için eklenenler;
