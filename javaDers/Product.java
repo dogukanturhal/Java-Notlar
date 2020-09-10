@@ -31,7 +31,7 @@ public class Product {
         return _renk;
     }
     public String getkod() {
-        return _kod;
+        return this._name.substring(0, 5) + this._id;
     }
     /* !!! Getter !!! */
 
@@ -47,9 +47,6 @@ public class Product {
     }
     public void setProductRenk(String setRenk) { // Ürünü set et
         this._renk = setRenk; //this. sınıfta ki verilerden almayı sağlar
-    }
-    public void setProductKod(String setKod) { // Ürünü set et
-        this._kod = setKod; //this. sınıfta ki verilerden almayı sağlar
     }
     public void setProductPrice(double setPrice) { // Ürünü set et
         this._price = setPrice; //this. sınıfta ki verilerden almayı sağlar

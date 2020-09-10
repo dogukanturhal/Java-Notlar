@@ -194,7 +194,6 @@ public class derslerJava { // Ana tanımlama
         newProduct.setProductId(1);
         newProduct.setProductPrice(13999.99);
         newProduct.setProductStock(2);
-        newProduct.setProductKod("14221895114");
         System.out.println(newProduct.getProductName());
         System.out.println(newProduct.getId());
         System.out.println(newProduct.getDescription());
