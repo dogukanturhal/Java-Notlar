@@ -159,6 +159,8 @@ public class derslerJava { // Ana tanımlama
         */
         int search = numberFinder(); /* Metodu Çağır ve dönen değeri atama yap */
         searchNumbers(search); /* Metodu Çağır */
+        int result = sumOfNumberArray(3,5,9,6,7,5,1,12,6,98,102); /*Metodu Çağır ve result'a eşitle */
+        System.out.println(result); /* Sonucu Yazdır */
         /* !!! Metodlar !!! */
         /* Yapılacak Eklemeler */
 
@@ -186,5 +188,13 @@ public class derslerJava { // Ana tanımlama
     /* 2.Metod */
     public static void searchNumbers(int search) {
         System.out.println("Number Has Found : " + search);
+    }
+    /* 3.Metod */
+    public static int sumOfNumberArray(int... numberArray) { // Birden fazla değişkeni kabul edebiliyor.
+        int sumOfNumbers = 0;
+        for (int numbersInArray : numberArray) {
+            sumOfNumbers += numbersInArray;
+        }
+        return sumOfNumbers;
     }
 }
