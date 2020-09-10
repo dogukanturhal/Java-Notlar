@@ -167,7 +167,16 @@ public class derslerJava { // Ana tanımlama
         
         /* !!! Sınıflar !!! */
 
-
+        CustomerManager customerManager = new CustomerManager(); // tanımlanmış sınıf için bellekte yerel bir bölüm oluşturuldu.
+        customerManager.addNewCustomer(); // Sınıfın içindeki "addNewCustomer" metodunu çalıştır.
+        DortIslem dortIslem = new DortIslem();
+        System.out.println(dortIslem.sumOfNumbers(10, 11));
+        System.out.println(dortIslem.subOfNumbers(10, 11));
+        System.out.println(dortIslem.multipleOfNumbers(10, 11));
+        System.out.println(dortIslem.divideOfNumbers(10,10));
+        /* Yada */
+        int cevap = dortIslem.divideOfNumbers(50, 5);
+        System.out.println(cevap);
 
         /* Yapılacak Eklemeler */
 
