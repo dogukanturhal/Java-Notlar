@@ -1,6 +1,7 @@
+import java.util.jar.Attributes.Name;
+
 /**
- * derslerJava
- * CamelCase Kullanılarak Yazılmaktadır.
+ * derslerJava CamelCase Kullanılarak Yazılmaktadır.
  */
 public class derslerJava { // Ana tanımlama
     public static void main(String[] args) {
@@ -150,61 +151,90 @@ public class derslerJava { // Ana tanımlama
         System.out.println(stringVal.trim()); // Başında ve Sonundaki Boşlukları Sil
         /* !!! Stringler !!! */
 
-        /* Metodlar */ 
+        /* Metodlar */
 
-        /* Metodlar Nedir ? 
-        * Basit Kısa ve Bir İşi Yapacak Şekilde Tasarım Yapılması Gereken
-        * Parçalanabilir Yapı Oluşturmak İçin 
-        * Tekrardan Kullanılabilir Yapılardır
-        */
+        /*
+         * Metodlar Nedir ? Basit Kısa ve Bir İşi Yapacak Şekilde Tasarım Yapılması
+         * Gereken Parçalanabilir Yapı Oluşturmak İçin Tekrardan Kullanılabilir
+         * Yapılardır
+         */
         int search = numberFinder(); /* Metodu Çağır ve dönen değeri atama yap */
         searchNumbers(search); /* Metodu Çağır */
-        int result = sumOfNumberArray(3,5,9,6,7,5,1,12,6,98,102); /*Metodu Çağır ve result'a eşitle */
+        int result = sumOfNumberArray(3, 5, 9, 6, 7, 5, 1, 12, 6, 98, 102); /* Metodu Çağır ve result'a eşitle */
         System.out.println(result); /* Sonucu Yazdır */
         /* !!! Metodlar !!! */
-        
-        /* Sınıflar */
-        
-        /* !!! Sınıflar !!! */
 
-        CustomerManager customerManager = new CustomerManager(); // tanımlanmış sınıf için bellekte yerel bir bölüm oluşturuldu.
+        /* Sınıflar */
+        CustomerManager customerManager = new CustomerManager(); // tanımlanmış sınıf için bellekte yerel bir bölüm
+                                                                 // oluşturuldu.
         customerManager.addNewCustomer(); // Sınıfın içindeki "addNewCustomer" metodunu çalıştır.
         DortIslem dortIslem = new DortIslem();
         System.out.println(dortIslem.sumOfNumbers(10, 11));
         System.out.println(dortIslem.subOfNumbers(10, 11));
         System.out.println(dortIslem.multipleOfNumbers(10, 11));
-        System.out.println(dortIslem.divideOfNumbers(10,10));
+        System.out.println(dortIslem.divideOfNumbers(10, 10));
         /* Yada */
         int cevap = dortIslem.divideOfNumbers(50, 5);
         System.out.println(cevap);
+        Product newProduct = new Product();
+        
+        ProductManager manageProducts = new ProductManager();
+        manageProducts.addProduct(newProduct); // Buraya yerelde ki bölümün ismini yazıyoruz. Sonrasında tanımladığımız
+                                               // sınıfın içinde belirttiğimiz özelliği kendisi alıyor
+        /* !!! Sınıflar !!! */
 
+        /* Encapsulation */
+        /*
+        * Herhangi bir alanı kullanmak için kullanıcıyı kısıtlar
+        */
+        System.out.println("------------------------");
+        newProduct.setProductRenk("Siyah");
+        newProduct.setProductName("Bilgisayar");
+        newProduct.setProductDescription("Lenovo");
+        newProduct.setProductId(1);
+        newProduct.setProductPrice(13999.99);
+        newProduct.setProductStock(2);
+        newProduct.setProductKod("14221895114");
+        System.out.println(newProduct.getProductName());
+        System.out.println(newProduct.getId());
+        System.out.println(newProduct.getDescription());
+        System.out.println(newProduct.getkod());
+        System.out.println(newProduct.getPrice());
+        System.out.println(newProduct.getStock());
+        System.out.println(newProduct.getRenk());
+        System.out.println("------------------------");
+        
+        /* !!! Encapsulation !!! */
         /* Yapılacak Eklemeler */
 
     }
+
     /* 1.Metod */
     public static int numberFinder() { // int double float gibi değerler return değer döndürmek zorundadır
-        int[] numbers = {1,2,5,7,12,6};
+        int[] numbers = { 1, 2, 5, 7, 12, 6 };
         int search = 7;
         boolean numberHasFound = false;
         for (int searchNumbers : numbers) {
-            if(searchNumbers == search){
+            if (searchNumbers == search) {
                 numberHasFound = true;
                 break;
             }
         }
-        if(numberHasFound){
+        if (numberHasFound) {
             System.out.println("Number Has Found. Success !!!");
             return search;
-        }else{
+        } else {
             System.out.println("Number Cannot Be Found !!!");
             return 0;
         }
-        
+
     }
+
     /* 2.Metod */
     public static void searchNumbers(int search) {
         System.out.println("Number Has Found : " + search);
     }
+
     /* 3.Metod */
     public static int sumOfNumberArray(int... numberArray) { // Birden fazla değişkeni kabul edebiliyor.
         int sumOfNumbers = 0;

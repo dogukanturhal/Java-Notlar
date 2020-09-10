@@ -25,8 +25,8 @@ Bu kodlar sadece eğitim amaçlı olarak hem kendime hemde java'yı öğrenmekte
 - Stringler
 - Metodlar (functions)
 - Sınıflar (Class)
-> **NOT** İlerleyen Süreçte Eklenecekler;
 - Encapsulation
+> **NOT** İlerleyen Süreçte Eklenecekler;
 - Constructors
 - Inheritance
 - Polymorphism
