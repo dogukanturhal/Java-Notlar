@@ -162,6 +162,13 @@ public class derslerJava { // Ana tanımlama
         int result = sumOfNumberArray(3,5,9,6,7,5,1,12,6,98,102); /*Metodu Çağır ve result'a eşitle */
         System.out.println(result); /* Sonucu Yazdır */
         /* !!! Metodlar !!! */
+        
+        /* Sınıflar */
+        
+        /* !!! Sınıflar !!! */
+
+
+
         /* Yapılacak Eklemeler */
 
     }
