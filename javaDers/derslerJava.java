@@ -223,6 +223,7 @@ public class derslerJava { // Ana tanımlama
         /*
         * ortak değerler PersonMiras dosyasında tutulmaktadır
         * CustomerMiras ve EmployeesMiras adında dosyalar hem işçi hemde müşteriyi tanımlamaktadır
+        * Sadece tek bir class'ı extend edebilir
         */
         CustomerMiras customer = new CustomerMiras();
         EmployeesMiras employee = new EmployeesMiras();
@@ -230,6 +231,24 @@ public class derslerJava { // Ana tanımlama
         employee._lastname = "Selimli";
         /* Dosyalarımızda bu değişkenler yok fakat ortak dosya olan PersonMiras sayesinde bu dosyalara erişim sağlayabiliyoruz.
         /* !!! Inheritance !!! */
+
+        /* Polymorphism */
+        /* Override yaparak örnek hazırlanıcaktır.
+        * Override belirli child classler parent class ile aynı metodu içeren metodu değiştirebilmektedir
+        */
+        BaseLogger[] logger = new BaseLogger[]{new DatabaseLogger() , new emailLogger() , new FileLogger()};
+        CustomerManagerPolymorph manage = new CustomerManagerPolymorph(new FileLogger());
+        manage.addLog();
+        /* BaseLogger içerisine int ve benzeri değişken tanımlamaları almaz sadece BaseLogger child elementleri kendi ismi ile tanımlar
+        for (BaseLogger baseLogger : logger) {
+            baseLogger.Log("Logging Complete");
+        }
+        */
+        BaseKrediManager[] krediManager = new BaseKrediManager[]{new OgretmenKrediManager(), new AskerKrediManager(), new OgrenciKrediManager()};
+        for (BaseKrediManager baseKrediManager : krediManager) {
+            System.out.println(baseKrediManager.krediHesapla(12));
+        }
+        /* !!! Polymorphism !!! */
 
     }
 

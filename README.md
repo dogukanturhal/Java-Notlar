@@ -33,8 +33,8 @@ $ java derslerJava.java
 - Encapsulation
 - Constructors
 - Inheritance
-### İlerleyen Süreçte Eklenecekler;
 - Polymorphism
+### İlerleyen Süreçte Eklenecekler;
 - Abstract Class
 - Interface
 - Composition, Inner Class, Static
