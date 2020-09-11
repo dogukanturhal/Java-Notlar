@@ -31,9 +31,9 @@ $ java derslerJava.java
 - Metodlar (functions)
 - Sınıflar (Class)
 - Encapsulation
-### İlerleyen Süreçte Eklenecekler;
 - Constructors
 - Inheritance
+### İlerleyen Süreçte Eklenecekler;
 - Polymorphism
 - Abstract Class
 - Interface

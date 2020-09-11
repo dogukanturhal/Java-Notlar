@@ -3,6 +3,11 @@ public class Product {
 
     /* Field (Özellikler) */
     
+    public Product (/*İçerisine parametre alabilir*/) { //Constructor tanımlandı.
+        /* Setter Gibi Görev Yapabilir*/
+        System.out.println("Contructor runs");
+    }
+
     private int _id;
     private String _name;
     private String _description;

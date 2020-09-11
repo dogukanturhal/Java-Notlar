@@ -1,5 +1,3 @@
-import java.util.jar.Attributes.Name;
-
 /**
  * derslerJava CamelCase Kullanılarak Yazılmaktadır.
  */
@@ -204,7 +202,34 @@ public class derslerJava { // Ana tanımlama
         System.out.println("------------------------");
         
         /* !!! Encapsulation !!! */
-        /* Yapılacak Eklemeler */
+        /* Constructors */
+
+        /*
+        * İlk değeri atamamıı sağlar new Product() tanımladığımız an çalışır.
+        * Product.java dosyasında constructor tanımlanmıştır.
+        * Constructorlar class'ın ismi ile tanımlanmalıdır.
+        * Farklı bir tanım : Product newProduct = new Product(değerler...) şeklinde de yazılıp değer gönderilebilir.
+        * Overloading yapılabilir
+        * Overloading : Aşırı tanımlama
+        * Aşağıda Overloading için örnek tanımlanmıştır class dosyası algebra.java
+        */
+        algebra newAlgebra = new algebra();
+        newAlgebra.sum(50, 40); //Ilk fonksiyonumuz
+        newAlgebra.sum(10, 40, 80); //Overloaded fonksiyonumuz
+        /* Sonucu yazdırmak için Systemç.out.println içerisine kodu yazınız
+        /* !!! Constructors !!! */
+        
+        /* Inheritance */
+        /*
+        * ortak değerler PersonMiras dosyasında tutulmaktadır
+        * CustomerMiras ve EmployeesMiras adında dosyalar hem işçi hemde müşteriyi tanımlamaktadır
+        */
+        CustomerMiras customer = new CustomerMiras();
+        EmployeesMiras employee = new EmployeesMiras();
+        customer._email="tututut@hotmail.com";
+        employee._lastname = "Selimli";
+        /* Dosyalarımızda bu değişkenler yok fakat ortak dosya olan PersonMiras sayesinde bu dosyalara erişim sağlayabiliyoruz.
+        /* !!! Inheritance !!! */
 
     }
 
