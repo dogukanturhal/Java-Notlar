@@ -175,7 +175,7 @@ public class derslerJava { // Ana tanımlama
         int cevap = dortIslem.divideOfNumbers(50, 5);
         System.out.println(cevap);
         Product newProduct = new Product();
-        
+
         ProductManager manageProducts = new ProductManager();
         manageProducts.addProduct(newProduct); // Buraya yerelde ki bölümün ismini yazıyoruz. Sonrasında tanımladığımız
                                                // sınıfın içinde belirttiğimiz özelliği kendisi alıyor
@@ -183,8 +183,8 @@ public class derslerJava { // Ana tanımlama
 
         /* Encapsulation */
         /*
-        * Herhangi bir alanı kullanmak için kullanıcıyı kısıtlar
-        */
+         * Herhangi bir alanı kullanmak için kullanıcıyı kısıtlar
+         */
         System.out.println("------------------------");
         newProduct.setProductRenk("Siyah");
         newProduct.setProductName("Bilgisayar");
@@ -200,55 +200,71 @@ public class derslerJava { // Ana tanımlama
         System.out.println(newProduct.getStock());
         System.out.println(newProduct.getRenk());
         System.out.println("------------------------");
-        
+
         /* !!! Encapsulation !!! */
         /* Constructors */
 
         /*
-        * İlk değeri atamamıı sağlar new Product() tanımladığımız an çalışır.
-        * Product.java dosyasında constructor tanımlanmıştır.
-        * Constructorlar class'ın ismi ile tanımlanmalıdır.
-        * Farklı bir tanım : Product newProduct = new Product(değerler...) şeklinde de yazılıp değer gönderilebilir.
-        * Overloading yapılabilir
-        * Overloading : Aşırı tanımlama
-        * Aşağıda Overloading için örnek tanımlanmıştır class dosyası algebra.java
-        */
+         * İlk değeri atamamıı sağlar new Product() tanımladığımız an çalışır.
+         * Product.java dosyasında constructor tanımlanmıştır. Constructorlar class'ın
+         * ismi ile tanımlanmalıdır. Farklı bir tanım : Product newProduct = new
+         * Product(değerler...) şeklinde de yazılıp değer gönderilebilir. Overloading
+         * yapılabilir Overloading : Aşırı tanımlama Aşağıda Overloading için örnek
+         * tanımlanmıştır class dosyası algebra.java
+         */
         algebra newAlgebra = new algebra();
-        newAlgebra.sum(50, 40); //Ilk fonksiyonumuz
-        newAlgebra.sum(10, 40, 80); //Overloaded fonksiyonumuz
-        /* Sonucu yazdırmak için Systemç.out.println içerisine kodu yazınız
-        /* !!! Constructors !!! */
-        
+        newAlgebra.sum(50, 40); // Ilk fonksiyonumuz
+        newAlgebra.sum(10, 40, 80); // Overloaded fonksiyonumuz
+        /*
+         * Sonucu yazdırmak için Systemç.out.println içerisine kodu yazınız /* !!!
+         * Constructors !!!
+         */
+
         /* Inheritance */
         /*
-        * ortak değerler PersonMiras dosyasında tutulmaktadır
-        * CustomerMiras ve EmployeesMiras adında dosyalar hem işçi hemde müşteriyi tanımlamaktadır
-        * Sadece tek bir class'ı extend edebilir
-        */
+         * ortak değerler PersonMiras dosyasında tutulmaktadır CustomerMiras ve
+         * EmployeesMiras adında dosyalar hem işçi hemde müşteriyi tanımlamaktadır
+         * Sadece tek bir class'ı extend edebilir
+         */
         CustomerMiras customer = new CustomerMiras();
         EmployeesMiras employee = new EmployeesMiras();
-        customer._email="tututut@hotmail.com";
+        customer._email = "tututut@hotmail.com";
         employee._lastname = "Selimli";
-        /* Dosyalarımızda bu değişkenler yok fakat ortak dosya olan PersonMiras sayesinde bu dosyalara erişim sağlayabiliyoruz.
-        /* !!! Inheritance !!! */
+        /*
+         * Dosyalarımızda bu değişkenler yok fakat ortak dosya olan PersonMiras
+         * sayesinde bu dosyalara erişim sağlayabiliyoruz. /* !!! Inheritance !!!
+         */
 
         /* Polymorphism */
-        /* Override yaparak örnek hazırlanıcaktır.
-        * Override belirli child classler parent class ile aynı metodu içeren metodu değiştirebilmektedir
-        */
-        BaseLogger[] logger = new BaseLogger[]{new DatabaseLogger() , new emailLogger() , new FileLogger()};
+        /*
+         * Override yaparak örnek hazırlanıcaktır. Override belirli child classler
+         * parent class ile aynı metodu içeren metodu değiştirebilmektedir
+         */
+        BaseLogger[] logger = new BaseLogger[] { new DatabaseLogger(), new emailLogger(), new FileLogger() };
         CustomerManagerPolymorph manage = new CustomerManagerPolymorph(new FileLogger());
         manage.addLog();
-        /* BaseLogger içerisine int ve benzeri değişken tanımlamaları almaz sadece BaseLogger child elementleri kendi ismi ile tanımlar
-        for (BaseLogger baseLogger : logger) {
-            baseLogger.Log("Logging Complete");
-        }
-        */
-        BaseKrediManager[] krediManager = new BaseKrediManager[]{new OgretmenKrediManager(), new AskerKrediManager(), new OgrenciKrediManager()};
+        /*
+         * BaseLogger içerisine int ve benzeri değişken tanımlamaları almaz sadece
+         * BaseLogger child elementleri kendi ismi ile tanımlar for (BaseLogger
+         * baseLogger : logger) { baseLogger.Log("Logging Complete"); }
+         */
+        BaseKrediManager[] krediManager = new BaseKrediManager[] { new OgretmenKrediManager(), new AskerKrediManager(),
+                new OgrenciKrediManager() };
         for (BaseKrediManager baseKrediManager : krediManager) {
             System.out.println(baseKrediManager.krediHesapla(12));
         }
         /* !!! Polymorphism !!! */
+        /* Abstract Class */
+        /*
+         * Eğer ki direk abstract sınıf içeren dosyayı kullanmak istersek || = new
+         * (diğer dosyalarda bulunan sınıflar) referans türünde olduğundan
+         * kullanılabilir BaseDatabaseAbstractManager test = new OracleDataBase(); gibi
+         * ama kendisi kullanılamaz veya override etmeniz gerekir.
+         */
+        CustomerAbstractManager customerAbsract = new CustomerAbstractManager();
+        customerAbsract.baseDatabaseAbstractManager = new SQLServer();
+        customerAbsract.getCustomers();
+        /* !!! Abstract Class !!! */
 
     }
 
