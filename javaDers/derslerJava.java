@@ -1,6 +1,7 @@
 /**
  * derslerJava CamelCase Kullanılarak Yazılmaktadır.
  */
+import paketler.islem; // paket tanımlandı.
 public class derslerJava { // Ana tanımlama
     public static void main(String[] args) {
         // Ana Kod Buraya Yazılacak
@@ -232,8 +233,9 @@ public class derslerJava { // Ana tanımlama
         employee._lastname = "Selimli";
         /*
          * Dosyalarımızda bu değişkenler yok fakat ortak dosya olan PersonMiras
-         * sayesinde bu dosyalara erişim sağlayabiliyoruz. /* !!! Inheritance !!!
-         */
+         * sayesinde bu dosyalara erişim sağlayabiliyoruz. 
+        /* !!! Inheritance !!! */
+        
 
         /* Polymorphism */
         /*
@@ -265,7 +267,30 @@ public class derslerJava { // Ana tanımlama
         customerAbsract.baseDatabaseAbstractManager = new SQLServer();
         customerAbsract.getCustomers();
         /* !!! Abstract Class !!! */
+        /* Interface */
+        /*
+        * Sınıflar gibi değiller fakat referans tutabilirler
+        * Abstractler gibi reaksiyon gösterir
+        * I ile başlayan dosyalar Interface üzerine dir
+        */
+        
+        /* !!! Interface !!! */
 
+        /* Static, Inner Class , Composition , Packages*/
+        /*
+        * Static başka sınıflar içerisinde new ile tekrardan tanımlama yapmadan direk çağırmamız için gereklidir. Bir defa üretilir her yerde geçerli kılar.
+        * Inner Classler bir class dosyasında tekrardan kullanılabilir ve inner class static olarak tanımlanabilir.
+        * import ile paketler projeye dahil edilir.
+        * java.util.scanner -> Kullanıcıdan bilgi alır.
+        * Scanner scanner = new Scanner(System.in); ile tanımlanır.
+        * String isim = scanner.nextLine(); -> Kullanıcıdan string değer okur. nextLine() string değer alır.
+        * Kendi paketlerimizi oluşturuduğumuz klasör  ismini dosyaya package (dosya ismi) şeklinde entegre ederiz.
+        * Oluşturulan paket dosyanın en üstünde tanımlanmıştır.
+        * Paket dosyası main ile aynı bölümde olmalıdır.
+        */
+        islem topla = new islem();
+        System.out.println(topla.topla(10, 20));
+        /* !!! Static, Inner Class , COmposition !!! */
     }
 
     /* 1.Metod */
