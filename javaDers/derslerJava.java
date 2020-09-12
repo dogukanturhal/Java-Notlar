@@ -1,7 +1,7 @@
 /**
  * derslerJava CamelCase Kullanılarak Yazılmaktadır.
  */
-import paketler.islem; // paket tanımlandı.
+import paketler.islem; // paket tanımlandı. yada paketler.* diyerek bütün dosyaları alır.
 public class derslerJava { // Ana tanımlama
     public static void main(String[] args) {
         // Ana Kod Buraya Yazılacak

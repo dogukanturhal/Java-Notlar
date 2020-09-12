@@ -38,12 +38,10 @@ $ java derslerJava.java
 - Inheritance
 - Polymorphism
 - Abstract Class
-
-### İlerleyen Süreçte Eklenecekler;
-
 - Interface
 - Composition, Inner Class, Static
 - Paketler
+### İlerleyen Süreçte Eklenecekler;
 - Koleksiyonlar
 - Hata Yönetimi (Error Handling)
 - Dosyalar ile çalışmak
