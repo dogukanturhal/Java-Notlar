@@ -1,3 +1,8 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashMap;
 /**
  * derslerJava CamelCase Kullanılarak Yazılmaktadır.
  */
@@ -291,6 +296,41 @@ public class derslerJava { // Ana tanımlama
         islem topla = new islem();
         System.out.println(topla.topla(10, 20));
         /* !!! Static, Inner Class , COmposition !!! */
+        /* Collections */
+        /*
+        * İlk olarak yukarıda java.util.ArrayList'i import ettik
+        *
+        *
+        *
+        */
+        ArrayList newArray = new ArrayList();
+        ArrayList<String> newArray1 = new ArrayList<String>();//Type-Safe Belirli ArrayList
+        newArray1.add("Ankara"); // Sadece String ifade alır.
+        System.out.println(newArray.size()); //Boyutunu göster
+        newArray.add(10);
+        newArray.add(40);
+        newArray.add("Kütüphane"); //ArrayList bütün değerleri alabilir.
+        System.out.println(newArray.size());
+        System.out.println(newArray.get(1));// 40 sayısını gösterir.
+        newArray.set(0, 49); //0. indeksdeki sayıyı 49 yapar.
+        newArray.remove(2); //Kütüphane silindi
+        Collections.sort(newArray);// Sıralama yaptırır ve düzenler
+        // Eğer ilk indeksi silerseniz sola doğru kaydırır.(diğer silme işlemlerinde de geçerli)
+        //newArray.clear();//Bütün değerleri siler
+        for (Object array : newArray) { //ArrayList obje olduğundan Object olarak tutulmalıdır
+            System.out.println(array);
+        }
+        HashMap<String,String> dictionary = new HashMap<String,String>();
+        dictionary.put("computer", "Bilgisayar"); //Put değer ekler.
+        dictionary.put("Lamp", "Lamba"); //Put değer ekler.
+        for (String item : dictionary.keySet()) { //Keyleri item listesine aktar
+            System.out.println(item);// Keysetleri listele , sadece keyler!!!!
+            System.out.println(dictionary.get(item)); // Değerleri yazdır
+        }
+        System.out.println(dictionary);
+        System.out.println(dictionary.get("Lamp")); //Sadece key in tuttuğu değeri getirir.
+        dictionary.remove("Lamp"); //Silme işlemi
+
     }
 
     /* 1.Metod */
