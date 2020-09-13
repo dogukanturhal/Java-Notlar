@@ -1,4 +1,14 @@
 import java.util.Scanner;
+
+import jdk.jfr.events.FileWriteEvent;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -330,7 +340,59 @@ public class derslerJava { // Ana tanımlama
         System.out.println(dictionary);
         System.out.println(dictionary.get("Lamp")); //Sadece key in tuttuğu değeri getirir.
         dictionary.remove("Lamp"); //Silme işlemi
-
+        /* !!! Collections !!! */
+        /* Hata Yönetimi */
+        //Program içerisindeki olası hataları yakalamamızı sağlar.
+        try {//ilk çalıştırılacak komut
+            int[] arr = new int[] {1,2,3,4};
+            System.out.println(arr[9]);
+        } catch (Exception e) { // Hata olduğunda çalışır
+            //TODO: handle exception
+            System.out.println(e);
+        }finally{ //try yada catch çalışsa dahi en son finally çalışacaktır
+            System.out.println("Finally Calisti");
+        }
+        //main üzerine throws ekleyerek hatayı yollaması gerekmektedir.
+        BufferedReader _reader = null; //Şu an için çalışmıyor.
+        int total = 0;
+        try {
+            _reader = new BufferedReader(new FileReader("D:\\Projects\\Java-Notlar-\\javaDers\\Test.txt"));
+            String line = null;
+            while ((line = _reader.readLine()) != null){
+                total += Integer.valueOf(line);
+            }
+            System.out.println(total);
+        }catch (FileNotFoundException e) {
+            //TODO: handle exception
+            e.printStackTrace();
+        } catch (Exception e) {
+        } finally{
+            //_reader.close(); //Yukarıya throws IOException Ekle yada try catch oluştur.
+            try {
+                _reader.close();
+            } catch (Exception e) {
+                //TODO: handle exception
+                System.out.println(e);
+            }
+        }
+        /* !!! Hata Yönetimi !!! */
+        /* Dosyalar İle Çalışmak */
+        File dosya = new File("D:\\Projects\\Java-Notlar-\\javaDers\\deneme.txt");
+        try {
+            if(dosya.createNewFile()){
+                System.out.println("File Created");
+            }else{
+                System.out.println("File Already Created");
+            }
+        } catch (Exception e) {
+            //TODO: handle exception
+            e.printStackTrace();
+        }
+        getFileInfo();
+        readFile();f
+        writeFile();
+        readFile();
+        /* !!! Dosyalar İle Çalışmak !!! */
     }
 
     /* 1.Metod */
@@ -366,5 +428,43 @@ public class derslerJava { // Ana tanımlama
             sumOfNumbers += numbersInArray;
         }
         return sumOfNumbers;
+    }
+    /* File Read Write Get */
+    public static void getFileInfo() {
+        File dosya = new File("D:\\Projects\\Java-Notlar-\\javaDers\\deneme.txt");
+        if(dosya.exists()){ // Eğer dosya varsa
+            System.out.println("File Name : " + dosya.getName()); // Dosyanın ismini oku
+            System.out.println("File Path : " + dosya.getAbsolutePath()); // Dosyanın yolunu oku
+            System.out.println("File Writeable : " + dosya.canWrite()); // Dosya yazılabilir mi?
+            System.out.println("File Readable : " + dosya.canRead()); // Dosya okunabilir mi?
+            System.out.println("File Size (byte) : " + dosya.length() +" "+ "byte"); // Dosya okunabilir mi?
+        }
+    }
+    public static void readFile() {
+        File dosya = new File("D:\\Projects\\Java-Notlar-\\javaDers\\deneme.txt");
+        
+        try {
+            Scanner newScan = new Scanner(dosya);
+            while (newScan.hasNextLine()) { //Okuya bildiği yere kadar
+                String data = newScan.nextLine(); //Yeni satırları oku eğer varsa;
+                System.out.println(data);
+            }
+            newScan.close();
+        } catch (Exception e) {
+            //TODO: handle exception
+        }
+    }
+    public static void writeFile() {
+        try {
+            //FileWriter newWriter = new FileWriter("D:\\Projects\\Java-Notlar-\\javaDers\\deneme.txt", true);//true eklemezsek sıfırdan dosya silip öyle ekleyecek
+            //yada 
+            BufferedWriter newWriter= new BufferedWriter (new
+            FileWriter("D:\\Projects\\Java-Notlar-\\javaDers\\deneme.txt"));
+            newWriter.newLine(); // newLine sadece Buffer ile gelir.
+            newWriter.write("Eklendi");
+            newWriter.close();
+        } catch (Exception e) {
+            //TODO: handle exception
+        }
     }
 }

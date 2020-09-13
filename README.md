@@ -42,8 +42,8 @@ $ java derslerJava.java
 - Composition, Inner Class, Static
 - Paketler
 - Koleksiyonlar
-### İlerleyen Süreçte Eklenecekler;
 - Hata Yönetimi (Error Handling)
+### İlerleyen Süreçte Eklenecekler;
 - Dosyalar ile çalışmak
 - Generics
 - Threading
