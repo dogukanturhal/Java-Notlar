@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-import jdk.jfr.events.FileWriteEvent;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -389,7 +388,7 @@ public class derslerJava { // Ana tanımlama
             e.printStackTrace();
         }
         getFileInfo();
-        readFile();f
+        readFile();
         writeFile();
         readFile();
         /* !!! Dosyalar İle Çalışmak !!! */
